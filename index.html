@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        table,th,td{
-            border: 1px solid gray;
-        }
-        th, td{
-            width: 200px;
-        }
+      .active.table{
+        display: block;
+      }
+      .table{
+        display: none;
+      }
     </style>
-</head>
-<body>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-        </thead>
-        <tbody id="tbody">
+  </head>
+  <body>
+    <label for="">Users: </label>
+    <select name="" id="">
+        <option value="">sdfgsd</option>
+        <option value="">sdfgsd</option>
+        <option value="">sdfgsd</option>
+    </select>
 
-        </tbody>
-        <!-- <p id="p"></p>
-        <button id="btn">reset</button>
-        <button id="stop">stop</button>
-        <button id="start">start</button> -->
+      <label for="">Name: </label>
+      <input type="text" id="inp-name" />
+      <label for="">Rating: </label>
+      <input type="text" id="inp-rating" />
+      <button onclick="CreatePost()">Create</button>
+      <button onclick="UpdatePost()">Update</button><br>
+      <button id="showData">Show Data</button>
+    <table border="1" class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/promise.js"></script>
-</body>
+  </body>
 </html>
